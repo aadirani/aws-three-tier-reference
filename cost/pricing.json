@@ -1,0 +1,26 @@
+{
+  "region": "us-east-1",
+  "currency": "USD",
+  "note": "Approximate on-demand list prices, entered by hand. Not checked against the live AWS price list; confirm every value in the AWS Pricing Calculator before using these numbers.",
+  "prices": {
+    "ec2_t4g_small":       { "usd": 0.0168, "unit": "hour",            "description": "EC2 t4g.small, Linux" },
+    "ec2_t4g_medium":      { "usd": 0.0336, "unit": "hour",            "description": "EC2 t4g.medium, Linux" },
+    "ebs_gp3":             { "usd": 0.08,   "unit": "GB-month",        "description": "EBS gp3 volume storage" },
+    "alb_hour":            { "usd": 0.0225, "unit": "hour",            "description": "Application Load Balancer, per hour" },
+    "alb_lcu":             { "usd": 0.008,  "unit": "hour",            "description": "Application Load Balancer, per LCU-hour" },
+    "nat_hour":            { "usd": 0.045,  "unit": "hour",            "description": "NAT gateway, per hour" },
+    "nat_gb":              { "usd": 0.045,  "unit": "GB",              "description": "NAT gateway, per GB processed" },
+    "public_ipv4":         { "usd": 0.005,  "unit": "hour",            "description": "Public IPv4 address, per hour" },
+    "rds_pg_micro_maz":    { "usd": 0.032,  "unit": "hour",            "description": "RDS PostgreSQL db.t4g.micro, Multi-AZ" },
+    "rds_pg_medium_maz":   { "usd": 0.130,  "unit": "hour",            "description": "RDS PostgreSQL db.t4g.medium, Multi-AZ" },
+    "rds_gp3_maz":         { "usd": 0.23,   "unit": "GB-month",        "description": "RDS gp3 storage, Multi-AZ" },
+    "data_out":            { "usd": 0.09,   "unit": "GB",              "description": "Data transfer out to the internet" },
+    "cw_logs":             { "usd": 0.50,   "unit": "GB",              "description": "CloudWatch Logs ingestion" },
+    "cw_alarm":            { "usd": 0.10,   "unit": "month",           "description": "CloudWatch standard alarm" },
+    "secret":              { "usd": 0.40,   "unit": "month",           "description": "Secrets Manager secret" },
+    "waf_acl":             { "usd": 5.00,   "unit": "month",           "description": "WAF web ACL" },
+    "waf_rule":            { "usd": 1.00,   "unit": "month",           "description": "WAF rule or managed rule group" },
+    "waf_requests":        { "usd": 0.60,   "unit": "million requests", "description": "WAF requests inspected" },
+    "s3_standard":         { "usd": 0.023,  "unit": "GB-month",        "description": "S3 Standard storage (logs)" }
+  }
+}

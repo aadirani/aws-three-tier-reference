@@ -1,0 +1,46 @@
+{
+  "small": {
+    "description": "Pilot or low traffic: Terraform defaults (single NAT, 2 small servers, micro Multi-AZ database).",
+    "items": [
+      { "item": "App servers: 2 x t4g.small",        "price": "ec2_t4g_small",    "quantity": 2 },
+      { "item": "App server disks: 2 x 20 GB",       "price": "ebs_gp3",          "quantity": 40 },
+      { "item": "Load balancer (hours)",             "price": "alb_hour",         "quantity": 1 },
+      { "item": "Load balancer (1 LCU average)",     "price": "alb_lcu",          "quantity": 1 },
+      { "item": "NAT gateway: 1 (hours)",            "price": "nat_hour",         "quantity": 1 },
+      { "item": "NAT gateway data: 50 GB",           "price": "nat_gb",           "quantity": 50 },
+      { "item": "Public IPv4: 2 ALB + 1 NAT",        "price": "public_ipv4",      "quantity": 3 },
+      { "item": "Database: db.t4g.micro Multi-AZ",   "price": "rds_pg_micro_maz", "quantity": 1 },
+      { "item": "Database storage: 20 GB",           "price": "rds_gp3_maz",      "quantity": 20 },
+      { "item": "Data out to internet: 100 GB",      "price": "data_out",         "quantity": 100 },
+      { "item": "CloudWatch Logs: 5 GB",             "price": "cw_logs",          "quantity": 5 },
+      { "item": "CloudWatch alarms: 10",             "price": "cw_alarm",         "quantity": 10 },
+      { "item": "Secrets Manager: 1 secret",         "price": "secret",           "quantity": 1 },
+      { "item": "WAF web ACL",                       "price": "waf_acl",          "quantity": 1 },
+      { "item": "WAF rules: 4",                      "price": "waf_rule",         "quantity": 4 },
+      { "item": "WAF requests: 2 million",           "price": "waf_requests",     "quantity": 2 },
+      { "item": "S3 log storage: 20 GB",             "price": "s3_standard",      "quantity": 20 }
+    ]
+  },
+  "production": {
+    "description": "Moderate production traffic: NAT per AZ, 4 medium servers, larger Multi-AZ database.",
+    "items": [
+      { "item": "App servers: 4 x t4g.medium",       "price": "ec2_t4g_medium",    "quantity": 4 },
+      { "item": "App server disks: 4 x 20 GB",       "price": "ebs_gp3",           "quantity": 80 },
+      { "item": "Load balancer (hours)",             "price": "alb_hour",          "quantity": 1 },
+      { "item": "Load balancer (3 LCU average)",     "price": "alb_lcu",           "quantity": 3 },
+      { "item": "NAT gateways: 2 (hours)",           "price": "nat_hour",          "quantity": 2 },
+      { "item": "NAT gateway data: 200 GB",          "price": "nat_gb",            "quantity": 200 },
+      { "item": "Public IPv4: 2 ALB + 2 NAT",        "price": "public_ipv4",       "quantity": 4 },
+      { "item": "Database: db.t4g.medium Multi-AZ",  "price": "rds_pg_medium_maz", "quantity": 1 },
+      { "item": "Database storage: 100 GB",          "price": "rds_gp3_maz",       "quantity": 100 },
+      { "item": "Data out to internet: 500 GB",      "price": "data_out",          "quantity": 500 },
+      { "item": "CloudWatch Logs: 20 GB",            "price": "cw_logs",           "quantity": 20 },
+      { "item": "CloudWatch alarms: 20",             "price": "cw_alarm",          "quantity": 20 },
+      { "item": "Secrets Manager: 2 secrets",        "price": "secret",            "quantity": 2 },
+      { "item": "WAF web ACL",                       "price": "waf_acl",           "quantity": 1 },
+      { "item": "WAF rules: 4",                      "price": "waf_rule",          "quantity": 4 },
+      { "item": "WAF requests: 20 million",          "price": "waf_requests",      "quantity": 20 },
+      { "item": "S3 log storage: 100 GB",            "price": "s3_standard",       "quantity": 100 }
+    ]
+  }
+}
