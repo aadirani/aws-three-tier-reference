@@ -21,7 +21,8 @@ Split the application into three layers, each in its own part of the network. Th
 
 - ✅ Terraform passes `terraform fmt` and `terraform validate` automatically on every change (badge above).
 - ✅ The cost model is covered by unit tests.
-
+- ⚠️ The infrastructure has **not been deployed** from this repository. `validate` checks that the code is well-formed, not that AWS would accept every setting.
+- ⚠️ Prices are approximate and entered by hand. Confirm them in the [AWS Pricing Calculator](https://calculator.aws/).
 
 ## Cost at a glance
 
@@ -49,6 +50,4 @@ terraform apply
 ```
 
 Open the `alb_dns_name` output in a browser. The page shows which Availability Zone answered. Remove everything afterwards with `terraform destroy`. `db_deletion_protection` must be `false` for that, as set in the example file.
-
----
 
